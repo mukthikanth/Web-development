@@ -11,7 +11,9 @@ searchButton.addEventListener('click', function(){
   const searchedSong = document.getElementById('searchBar').value
   console.log(searchedSong)
 
-  const [artist, songName] = searchedSong.split('-')
+  if(searchedSong.includes('-')){
+
+    const [artist, songName] = searchedSong.split('-')
 
   fetch(`https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(songName)}`)
   .then(response => response.json())
@@ -23,7 +25,15 @@ searchButton.addEventListener('click', function(){
   })
   .catch(error => {
     result.innerHTML = `<pre>${error} has occured</pre>`
+    searchBar.value=''
   })
+  } else{
+    result.innerHTML = `<p>Enter the artist and song name in the format mentioned above</p>`
+    searchBar.value=''
+
+  }
+
+  
 
 
 })

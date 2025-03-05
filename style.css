@@ -19,11 +19,16 @@ body {
     border-radius: 12px;
     background-color: #16171d;
     outline: none;
-    color: #bdbecb;
+    color: #a0a0a0;
     transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
     cursor: text;
     z-index: 0;
   }
+
+#searchBar:focus {
+    background-color: #1c1d26;
+    color: #d1d1d1; 
+}
   
 /* From Uiverse.io by gksckt */ 
 #button {
