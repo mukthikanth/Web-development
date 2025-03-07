@@ -1,2 +1,3 @@
 # My web-dev projects
-## A website to find Lyrics
+## Lyrics Finder
+### A website to find lyrics
