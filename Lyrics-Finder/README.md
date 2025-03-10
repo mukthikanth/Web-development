@@ -1,3 +1,3 @@
-#A simple Lyrics finder website
+A simple Lyrics finder website
 
 https://simplelyricsfinderr.netlify.app/
