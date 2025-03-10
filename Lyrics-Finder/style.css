@@ -2,15 +2,39 @@ body {
     background-color: black;
 }
 
-#searchBar {
-    width: 500px;
-    height: 30px;
-    align-content: center;
+#heading {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 250%;
+}
+
+#searchBar::placeholder{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 145%;
+    text-align: center;
+
+}
+
+#input {
+    margin-top: 150px;
 }
 
 #searchBar {
-    font-family: "Montserrat", sans-serif;
-    width: 75%;
+    width: 700px;
+    height: 30px;
+    align-content: center;
+    margin-left: 350px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 140%  ;
     height: 45px;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -30,31 +54,43 @@ body {
     color: #d1d1d1; 
 }
   
-/* From Uiverse.io by gksckt */ 
 #button {
     background-color: #444141;
-    border-radius: 4px;
+    border-radius: 12px;
     color: #fff;
     cursor: pointer;
     padding: 15px 30px;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: bold;
+    font-style: italic;
     letter-spacing: 1px;
     border: none;
+    color: rgb(248, 242, 242);
+    background-color: #434040;
    }
    
-   button:hover {
-    background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
-    animation: slidernbw 5s linear infinite;
-    color: #000;
+   #button:hover {
+    background-color: rgb(208, 207, 207);
+    color: #434040;
    }
    
-   @keyframes slidernbw {
-    to {
-     background-position: 20vw;
-    }
-   }
+
 
 #output {
     color: aliceblue;
+    margin-top: 50px;
+    text-align: center;
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 10px;
+    margin-bottom: 30px;
 }
+
+#output pre {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 245%;
+    line-height: 1;
+}
+

@@ -5,6 +5,7 @@ let lyrics;
 const searchButton = document.getElementById('button')
 const searchBar = document.getElementById('searchBar')
 const result = document.getElementById('output')
+const input = document.getElementById('input')
 
 
 searchButton.addEventListener('click', function(){
@@ -20,8 +21,8 @@ searchButton.addEventListener('click', function(){
   .then(data => {
     lyrics = data.lyrics
     console.log(lyrics)
+    input.style.marginTop = '35px'
     result.innerHTML = `<pre>${lyrics}</pre>`
-
   })
   .catch(error => {
     result.innerHTML = `<pre>${error} has occured</pre>`
