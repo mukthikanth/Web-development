@@ -21,8 +21,19 @@ searchButton.addEventListener('click', function(){
   .then(data => {
     lyrics = data.lyrics
     console.log(lyrics)
-    input.style.marginTop = '35px'
-    result.innerHTML = `<pre>${lyrics}</pre>`
+
+    if(lyrics){
+      input.style.marginTop = '35px'
+      result.innerHTML = `<pre>${lyrics}</pre>`
+    }
+    else{
+      result.innerHTML = "<p>Lyrics not found</p>"
+      setInterval(() => {
+        searchBar.value=''
+        result.innerHTML = "<p>Try another song</p>"
+      }, 4000);
+    }
+    
   })
   .catch(error => {
     result.innerHTML = `<pre>${error} has occured</pre>`
