@@ -101,3 +101,40 @@ p{
 
 }
 
+@media (max-width: 480px ) {
+   body {
+    max-width: 480px;
+
+   }
+
+   #heading{
+    margin-top: 30%;
+   }
+
+   #searchBar {
+    width: 90%;
+    max-width: 400px;
+    margin-left: 5%;
+    font-size: 90%;
+    padding-right: 20px;
+   }
+
+
+   #button{
+    display: block;
+    margin-left: 30% ;
+    margin-top: 5%;
+   }
+   
+   #output{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 90%;
+    overflow-x: auto;
+   }
+
+   #output pre {
+    font-size: 78%;
+   }
+}
+

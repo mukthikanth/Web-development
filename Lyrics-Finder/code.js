@@ -9,6 +9,10 @@ const input = document.getElementById('input')
 
 
 searchButton.addEventListener('click', function(){
+  setTimeout(() => {
+    searchButton.style.backgroundColor = "#434040"
+    searchButton.style.color = "rgb(248, 242, 242)"
+  }, 100);
   const searchedSong = document.getElementById('searchBar').value
   console.log(searchedSong)
 
@@ -30,7 +34,7 @@ searchButton.addEventListener('click', function(){
       result.innerHTML = "<p>Lyrics not found</p>"
       setInterval(() => {
         searchBar.value=''
-        result.innerHTML = "<p>Try another song</p>"
+        result.innerHTML = "<p>Try again</p>"
       }, 4000);
     }
     
