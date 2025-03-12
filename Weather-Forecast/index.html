@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet">
+    <title>WeatherCast</title>
+</head>
+<body>
+    <div class="container">
+        <div id="input">
+            <input type="search" id="userInput" placeholder="Enter City Name...">
+            <button id="button">Search</button>
+        </div>
+        <hr style="border: 2px solid #5c4033;">
+        <div class="output">
+            <p id="current-time"></p>
+            <p id="cityname"></p>
+
+            <div class="temp-icon">
+                <div id="weathericon"></div>
+                <div id="temperature"></div>
+            </div>
+
+            <p id="description"></p>
+
+            <div class="wind-humidity">
+                <div id="wind"></div>
+                <div id="humidity"></div>
+            </div>
+
+            <div id="forecast">
+                <div id="first">
+                    <p id="time0"></p>
+                    <img alt="image of weather" id="img0">
+                    <p id="temp0"></p>
+                </div>
+                <div id="second">
+                    <p id="time1"></p>
+                    <img alt="image of weather" id="img1">
+                    <p id="temp1"></p>
+                </div>
+                <div id="third">
+                    <p id="time2"></p>
+                    <img alt="image of weather" id="img2">
+                    <p id="temp2"></p>
+                </div>
+                <div id="fourth">
+                    <p id="time3"></p>
+                    <img alt="image of weather" id="img3">
+                    <p id="temp3"></p>
+                </div>
+                <div id="fifth">
+                    <p id="time4"></p>
+                    <img alt="image of weather" id="img4">
+                    <p id="temp4"></p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script src="code.js"></script>
+</html>
