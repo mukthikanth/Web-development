@@ -1,18 +1,9 @@
 let searchBar = document.getElementById('userInput')
 const Searchbutton = document.getElementById('button')
-const API_KEY = "36421c0e4d02fd00584284434afe866a"
 
 fetchweather("bengaluru")
 
-// let apiData;
-// let description;
-// let currentcity;
-// let wind_speed;
-// let windSpeedInKm;
-// let humidity;
 let forecastData;
-// let forecastTime;
-// let timern;
 
 Searchbutton.addEventListener('click', function (){
      let CITY_NAME = document.getElementById('userInput').value
@@ -21,7 +12,7 @@ Searchbutton.addEventListener('click', function (){
 })
 
 function fetchweather(CITY_NAME){
-    const currentweatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${CITY_NAME}&appid=${API_KEY}&units=metric`
+    const currentweatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${CITY_NAME}&appid=36421c0e4d02fd00584284434afe866a&units=metric`
     fetch(currentweatherURL)
     .then(response => response.json())
     .then(data => {
@@ -73,7 +64,7 @@ function displayweather(apiData){
 
 function forecastweather(CITY_NAME){
 
-    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY_NAME}&appid=${API_KEY}&units=metric`
+    const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY_NAME}&appid=36421c0e4d02fd00584284434afe866a&units=metric`
     fetch(forecastURL)
     .then(response => response.json())
     .then(data => {
@@ -99,24 +90,8 @@ function displayforecast(forecastData){
     
         time1.textContent = timern
         img.src = imgurl
-        temp.innerHTML = `<p>${temperature}&deg;C</p>`
-        
-        
+        temp.innerHTML = `<p>${temperature}&deg;C</p>` 
     }
-    // forecastTime = forecastData.list[0].dt_txt
-    // time(forecastTime)
-
-    // let time1 = document.getElementById('time1') 
-    // let img1 = document.getElementById('img1')
-    // let img = forecastData.list[0].weather[0].icon
-    // let imgurl = `https://openweathermap.org/img/wn/${img}.png`
-    // let temp = forecastData.list[0].main.temp
-    // let temp1 = document.getElementById('temp1')
-
-
-    // time1.textContent = timern
-    // img1.src = imgurl
-    // temp1.innerHTML = `<p>${temp}&deg;C</p>`
 }
 
 
